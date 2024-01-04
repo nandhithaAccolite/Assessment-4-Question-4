@@ -1,0 +1,6 @@
+<app-board [cells]="cells"></app-board>
+    <app-player *ngFor="let player of players" [name]="player.name" [color]="player.color"></app-player>
+    <button (click)="rollDice()" [disabled]="isGameOver">Roll Dice</button>
+    <div *ngIf="winner" class="winner-message">
+      {{ winner }} wins!
+    </div>
